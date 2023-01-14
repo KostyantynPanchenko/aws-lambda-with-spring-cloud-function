@@ -2,17 +2,28 @@
 
 ## How to
 
+### Build
+
 * Build this project `./gradlew build`
 * Login into you AWS account
 * Navigate to Lambda service
 * Create new function with Java 11 as runtime and jar file from step 1
 * Test it
 
-Then add SnapStart functionality by editing
+### Add SnapStart functionality
+
+Add SnapStart functionality by editing
 * Go to `Configuration` tab
 * In `General Configuration` press `Edit`
 * In `SnapStart` dropbox choose `PublishedVersions`
 * Wait till it is done and test once again
+
+### Test on local machine
+
+* Start the app `./gradlew bootRun` or from your IDE
+* Issue get request `curl -X GET --location http://localhost:8080/uppercase/howdy`
+
+## Additional information
 
 ### Functions could be automatically exported as HTTP endpoints.
 | Method |     Path     |Request | Response |Status |
